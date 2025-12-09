@@ -1,21 +1,71 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>My Personal Project Portfolio</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        .project-card { border: 1px solid #ccc; margin: 20px; padding: 20px; display: inline-block; width: 300px; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sharvita — Projects</title>
+
+  <!-- Fonts: Montserrat for headings, Inter for body (swap to your preference) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Sharvita's Personal Projects</h1>
-    <p>Welcome to my free online portfolio hosted on GitHub Pages!</p>
-
-    <div class="project-card">
-        <h2>Project 1: Financial-Research-Multi-Agent-System</h2>
-        <p>An autonomous multi-agent system for financial research and analysis using LangGraph, featuring specialized agents that collaborate to produce structured financial reports.</p>
-        <a href="https://github.com/sharvita/Financial-Research-Multi-Agent-System" target="_blank">View Project Code (GitHub)</a>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Sharvita</h1>
+      <nav class="site-nav">
+        <a href="/">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    </body>
+  <main class="container">
+    <section class="hero">
+      <h2 class="hero-title">Selected Projects</h2>
+      <p class="hero-sub">Curated experiments in design, code, and systems — clean, futuristic, exclusive.</p>
+    </section>
+
+    <section class="projects-grid" aria-label="Projects">
+      <!-- Example project card -->
+      <article class="project-card">
+        <a class="card-link" href="projects/project-1.html">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/project-1-thumb.webp" alt="Project 1 thumbnail" width="800" height="500" loading="lazy">
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-text="Project One">Project One</h3>
+            <p class="card-desc">A one-sentence summary that highlights the project's idea and impact.</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Duplicate project-card blocks for each project -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 Sharvita • Designed with a clean, futuristic aesthetic</small>
+    </div>
+  </footer>
+
+  <!-- Optional: toggle for light/dark (JS minimal) -->
+  <script>
+    // Simple theme toggle preserving preference in localStorage
+    (function () {
+      const toggleKey = 'theme';
+      const stored = localStorage.getItem(toggleKey);
+      if (stored) document.documentElement.dataset.theme = stored;
+      window.toggleTheme = function(theme){
+        document.documentElement.dataset.theme = theme;
+        localStorage.setItem(toggleKey, theme);
+      };
+    })();
+  </script>
+</body>
 </html>
