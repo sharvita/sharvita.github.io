@@ -19,7 +19,7 @@ logo: "/assets/images/logo.png"
 # AUTHOR PROFILE (REQUIRED for avatar to show up on pages/posts)
 author:
   name: "Sharvita Paithankar"
-  # Use the direct path to the image in your repository's assets folder
+  # Path must be relative to the site root: /assets/images/filename.extension
   avatar: "/assets/images/myLinkedinPicture.JPEG" 
   bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio" 
 
@@ -51,7 +51,7 @@ main:
   - title: "About Me"
     url: "/about/"
   - title: "Projects"
-    url: "/projects/" # Assuming you will create this page later
+    url: "/projects/"
 
 header:
   overlay_color: "#000000" # Pure Black
@@ -59,7 +59,7 @@ header:
   caption: "Sharvita Paithankar | AI/ML, Full-Stack, Cloud Engineer"
   actions:
     - label: "View Resume (PDF)"
-      url: "/assets/sharvita-resume.pdf" # This must be the path to the PDF in your repo
+      url: "/assets/sharvita-resume.pdf" # Path to your PDF
     - label: "Get In Touch"
       url: "mailto:sharvitap123@gmail.com"
 
