@@ -1,3 +1,4 @@
+# _config.yml
 # ----------------------------------------
 # THEME CONFIGURATION
 # ----------------------------------------
@@ -12,9 +13,16 @@ title: "Sharvita Paithankar | Technical Portfolio"
 name: "Sharvita Paithankar"
 description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio."
 locale: "en-US"
-repository: "sharvita/sharvita.github.io" # **CONFIRM YOUR USERNAME HERE**
-minimal_mistakes_skin: "dark" # Use the dark theme for a futuristic, classy look
-logo: "/assets/images/logo.png" # Optional: Place a small logo image here
+repository: "sharvita/sharvita.github.io"
+minimal_mistakes_skin: "dark"
+logo: "/assets/images/logo.png"
+
+# AUTHOR PROFILE (REQUIRED FOR AVATAR TO SHOW UP)
+author:
+  name: "Sharvita Paithankar"
+  # Use the direct path to the image in your repository
+  avatar: "/assets/images/myLinkedinPicture.JPEG" 
+  bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio" 
 
 # NAVIGATION MENU (The links that appear at the top of the site)
 defaults:
@@ -37,7 +45,8 @@ defaults:
       layout: single
       author_profile: true
 header:
-  overlay_color: "#333333" # Dark Gray/Black
+  overlay_color: "#000000" # Pure Black from index.md
+  overlay_image: /assets/images/abstract-tech-background.jpg
   actions:
     - label: "View Resume (PDF)"
       url: "/assets/sharvita-resume.pdf"
@@ -57,4 +66,4 @@ footer:
 # Build settings
 markdown: kramdown
 permalink: /:title/
-timezone: America/Denver # Set to your local time
+timezone: America/Denver
