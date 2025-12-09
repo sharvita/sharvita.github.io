@@ -1,31 +1,42 @@
 /* --- Custom Styles to emulate the React Component Aesthetics --- */
 
-// 1. Overriding Minimal Mistakes variables to use the component's dark color scheme
+// 1. Theme Color Overrides (Emulate Dark/Neon)
+// Overriding Minimal Mistakes variables
 $text-color: #e6eef6;
 $background-color: #000000;
+$link-color: #C3E41D;   // The component's bright neon/yellow accent color
+$primary-color: #C3E41D; 
+$link-hover-color: lighten($text-color, 15%); 
 $code-background-color: #0f0f0f;
 $border-color: #333333;
-$link-color: #C3E41D;   // The component's neon/yellow accent color
-$link-hover-color: $text-color; 
 
-// 2. Custom Fonts (Emulate Fira Code/Antic)
-// Note: You need to link Fira Code and Antic fonts in a Jekyll layout file (like _layouts/default.html) 
-// for these font-families to work, similar to what was in the React demo.
+// 2. Custom Fonts (These fonts must be linked in a Jekyll include file for best results)
+// The theme uses Montserrat and Source Sans Pro by default. We'll prioritize custom fonts where possible.
+$serif: "Fira Code", monospace, serif;
+$sans-serif: "Antic", sans-serif;
 
-// Example of custom styling for the page titles and links
+// Apply high-impact styling to the main elements
 .page__title, .archive__item-title {
-    font-family: 'Fira Code', monospace, sans-serif;
-    letter-spacing: -0.05em;
+    font-family: $serif;
+    letter-spacing: -0.04em;
     font-weight: 700;
 }
 
+// Apply the primary neon color to the site title and logo (if used)
+.site-title {
+    color: $primary-color !important;
+    font-family: $serif;
+}
+
+// Custom look for the feature rows (cards)
 .feature__item {
-    // Add border/shadow styling here to make the feature blocks look like 'cards'
-    border: 1px solid rgba(195, 228, 29, 0.2); // Subtle neon border
+    border: 1px solid rgba(195, 228, 29, 0.2); 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease-out;
+    background: lighten($background-color, 5%) !important;
+    
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(195, 228, 29, 0.15); // Subtle neon glow on hover
+        box-shadow: 0 8px 25px rgba(195, 228, 29, 0.15); 
     }
 }
