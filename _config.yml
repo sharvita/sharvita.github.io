@@ -1,4 +1,3 @@
-# _config.yml
 # ----------------------------------------
 # THEME CONFIGURATION
 # ----------------------------------------
@@ -14,17 +13,17 @@ name: "Sharvita Paithankar"
 description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio."
 locale: "en-US"
 repository: "sharvita/sharvita.github.io"
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "dark" 
 logo: "/assets/images/logo.png"
 
-# AUTHOR PROFILE (REQUIRED FOR AVATAR TO SHOW UP)
+# AUTHOR PROFILE (REQUIRED for avatar to show up on pages/posts)
 author:
   name: "Sharvita Paithankar"
-  # Use the direct path to the image in your repository
+  # Use the direct path to the image in your repository's assets folder
   avatar: "/assets/images/myLinkedinPicture.JPEG" 
   bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio" 
 
-# NAVIGATION MENU (The links that appear at the top of the site)
+# NAVIGATION MENU - Defines the links in the header
 defaults:
   # _posts
   - scope:
@@ -44,12 +43,23 @@ defaults:
     values:
       layout: single
       author_profile: true
+      
+# SITE NAVIGATION (Primary Header Links)
+main:
+  - title: "Home"
+    url: "/"
+  - title: "About Me"
+    url: "/about/"
+  - title: "Projects"
+    url: "/projects/" # Assuming you will create this page later
+
 header:
-  overlay_color: "#000000" # Pure Black from index.md
+  overlay_color: "#000000" # Pure Black
   overlay_image: /assets/images/abstract-tech-background.jpg
+  caption: "Sharvita Paithankar | AI/ML, Full-Stack, Cloud Engineer"
   actions:
     - label: "View Resume (PDF)"
-      url: "/assets/sharvita-resume.pdf"
+      url: "/assets/sharvita-resume.pdf" # This must be the path to the PDF in your repo
     - label: "Get In Touch"
       url: "mailto:sharvitap123@gmail.com"
 
@@ -62,17 +72,6 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://linkedin.com/in/sharvita/"
-
-# Site Navigation
-# Note: These URLs must match the 'permalink' set in the page's front matter (e.g., about.md)
-# The Minimal Mistakes theme uses 'main' for the primary header navigation
-main:
-  - title: "Home"
-    url: "/"
-  - title: "About Me"
-    url: "/about/"
-  - title: "Projects"
-    url: "/projects/"
 
 # Build settings
 markdown: kramdown
