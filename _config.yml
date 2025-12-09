@@ -8,24 +8,29 @@ plugins:
 # ----------------------------------------
 # SITE SETTINGS
 # ----------------------------------------
-title: "Sharvita Paithankar | Technical Portfolio"
+title: "Sharvita Paithankar | AI, Full-Stack, Cloud Portfolio"
 name: "Sharvita Paithankar"
 description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio."
 locale: "en-US"
 repository: "sharvita/sharvita.github.io"
-minimal_mistakes_skin: "dark" 
-logo: "/assets/images/logo.png"
+minimal_mistakes_skin: "dark"
+# logo: /assets/images/logo.png # Optional - Uncomment if you add a logo file
 
-# AUTHOR PROFILE (REQUIRED for avatar to show up on pages/posts)
+# AUTHOR PROFILE
 author:
   name: "Sharvita Paithankar"
-  # Path must be relative to the site root: /assets/images/filename.extension
+  # IMPORTANT: The path must be relative to the site root
   avatar: "/assets/images/myLinkedinPicture.JPEG" 
-  bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio" 
+  bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio." 
 
-# NAVIGATION MENU - Defines the links in the header
+# NAVIGATION LINKS (Used for standard Jekyll pages and posts)
 defaults:
-  # _posts
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
   - scope:
       path: ""
       type: posts
@@ -33,25 +38,15 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-      
-# SITE NAVIGATION (Primary Header Links)
+
+# PRIMARY HEADER NAVIGATION
 main:
   - title: "Home"
     url: "/"
   - title: "About Me"
-    url: "/about/"
+    url: "/about/" # Links to the permalink set in _pages/about.md
   - title: "Projects"
-    url: "/projects/"
+    url: "/projects/" # Links to the permalink set in _pages/projects.md
 
 header:
   overlay_color: "#000000" # Pure Black
@@ -59,7 +54,7 @@ header:
   caption: "Sharvita Paithankar | AI/ML, Full-Stack, Cloud Engineer"
   actions:
     - label: "View Resume (PDF)"
-      url: "/assets/sharvita-resume.pdf" # Path to your PDF
+      url: "/assets/sharvita-resume.pdf"
     - label: "Get In Touch"
       url: "mailto:sharvitap123@gmail.com"
 
