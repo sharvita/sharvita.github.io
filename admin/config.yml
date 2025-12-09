@@ -1,1 +1,60 @@
+# ----------------------------------------
+# THEME CONFIGURATION
+# ----------------------------------------
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+plugins:
+  - jekyll-include-cache
 
+# ----------------------------------------
+# SITE SETTINGS
+# ----------------------------------------
+title: "Sharvita Paithankar | Technical Portfolio"
+name: "Sharvita Paithankar"
+description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio."
+locale: "en-US"
+repository: "sharvita/sharvita.github.io" # **CONFIRM YOUR USERNAME HERE**
+minimal_mistakes_skin: "dark" # Use the dark theme for a futuristic, classy look
+logo: "/assets/images/logo.png" # Optional: Place a small logo image here
+
+# NAVIGATION MENU (The links that appear at the top of the site)
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+header:
+  overlay_color: "#333333" # Dark Gray/Black
+  actions:
+    - label: "View Resume (PDF)"
+      url: "/assets/sharvita-resume.pdf"
+    - label: "Get In Touch"
+      url: "mailto:sharvitap123@gmail.com"
+
+# Footer content
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/sharvita"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://linkedin.com/in/sharvita/"
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+timezone: America/Denver # Set to your local time
