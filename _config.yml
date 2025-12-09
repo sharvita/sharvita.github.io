@@ -1,0 +1,8 @@
+# This tells GitHub Pages to use the built-in Jekyll system
+# Change 'minima' to any theme you like!
+# Popular ones: jekyll-theme-architect, jekyll-theme-minimal, jekyll-theme-hacker
+remote_theme: pages-themes/minima@v0.2.0
+
+# Optional: Custom variables
+title: [Your Name]'s Portfolio
+description: A showcase of my personal projects.
