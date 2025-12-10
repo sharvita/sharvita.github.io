@@ -1,3 +1,5 @@
+Jekyll build trigger at [Current time is Tuesday, December 9, 2025 at 5:09:53 PM MST.]
+
 # Clean Futuristic Project Template (starter)
 
 What this provides
