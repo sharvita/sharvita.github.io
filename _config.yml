@@ -1,6 +1,7 @@
 # ----------------------------------------
 # THEME CONFIGURATION
 # ----------------------------------------
+# Keep the theme for Jekyll plugins and general structure, but we will override the main page.
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-include-cache
@@ -24,6 +25,7 @@ author:
   bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio." 
 
 # NAVIGATION LINKS (Used for standard Jekyll pages and posts)
+# We will use the custom site-nav in index.html, but keep these for other pages
 defaults:
   - scope:
       path: ""
@@ -39,14 +41,14 @@ defaults:
       author_profile: true
       read_time: true
 
-# PRIMARY HEADER NAVIGATION
+# PRIMARY HEADER NAVIGATION (Keep as fallback for other pages)
 main:
   - title: "Home"
     url: "/"
   - title: "About Me"
     url: "/about/" # Links to the permalink set in _pages/about.md
   - title: "Projects"
-    url: "/projects/" # Links to the permalink set in _pages/projects.md
+    url: "/projects/" 
 
 header:
   overlay_color: "#000000" # Pure Black
@@ -54,7 +56,8 @@ header:
   caption: "Sharvita Paithankar | AI/ML, Full-Stack, Cloud Engineer"
   actions:
     - label: "View Resume (PDF)"
-      url: "/assets/sharvita-resume.pdf"
+      # FIXED RESUME LOCATION
+      url: "/assets/images/sharvita-resume.pdf"
     - label: "Get In Touch"
       url: "mailto:sharvitap123@gmail.com"
 
