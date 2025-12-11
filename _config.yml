@@ -1,7 +1,6 @@
 # ----------------------------------------
 # THEME CONFIGURATION
 # ----------------------------------------
-# Keep the theme for Jekyll plugins and general structure, but we will override the main page.
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-include-cache
@@ -11,7 +10,7 @@ plugins:
 # ----------------------------------------
 title: "Sharvita Paithankar | AI, Full-Stack, Cloud Portfolio"
 name: "Sharvita Paithankar"
-description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio."
+[cite_start]description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio." [cite: 7, 8]
 locale: "en-US"
 repository: "sharvita/sharvita.github.io"
 minimal_mistakes_skin: "dark"
@@ -22,10 +21,9 @@ author:
   name: "Sharvita Paithankar"
   # IMPORTANT: The path must be relative to the site root
   avatar: "/assets/images/myLinkedinPicture.JPEG" 
-  bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio." 
+  [cite_start]bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio." [cite: 7, 8]
 
 # NAVIGATION LINKS (Used for standard Jekyll pages and posts)
-# We will use the custom site-nav in index.html, but keep these for other pages
 defaults:
   - scope:
       path: ""
@@ -41,7 +39,7 @@ defaults:
       author_profile: true
       read_time: true
 
-# PRIMARY HEADER NAVIGATION (Keep as fallback for other pages)
+# PRIMARY HEADER NAVIGATION (Kept for compatibility with other theme pages)
 main:
   - title: "Home"
     url: "/"
@@ -55,8 +53,8 @@ header:
   overlay_image: /assets/images/abstract-tech-background.jpg
   caption: "Sharvita Paithankar | AI/ML, Full-Stack, Cloud Engineer"
   actions:
+    # FIXED: Updated the URL to the correct location for the resume
     - label: "View Resume (PDF)"
-      # FIXED RESUME LOCATION
       url: "/assets/images/sharvita-resume.pdf"
     - label: "Get In Touch"
       url: "mailto:sharvitap123@gmail.com"
