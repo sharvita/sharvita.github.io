@@ -10,7 +10,7 @@ plugins:
 # ----------------------------------------
 title: "Sharvita Paithankar | AI, Full-Stack, Cloud Portfolio"
 name: "Sharvita Paithankar"
-[cite_start]description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio." [cite: 7, 8]
+description: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio."
 locale: "en-US"
 repository: "sharvita/sharvita.github.io"
 minimal_mistakes_skin: "dark"
@@ -21,7 +21,7 @@ author:
   name: "Sharvita Paithankar"
   # IMPORTANT: The path must be relative to the site root
   avatar: "/assets/images/myLinkedinPicture.JPEG" 
-  [cite_start]bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio." [cite: 7, 8]
+  bio: "AI/ML, Full-Stack Development, and Cloud Engineering Portfolio."
 
 # NAVIGATION LINKS (Used for standard Jekyll pages and posts)
 defaults:
@@ -44,16 +44,15 @@ main:
   - title: "Home"
     url: "/"
   - title: "About Me"
-    url: "/about/" # Links to the permalink set in _pages/about.md
+    url: "/about/"
   - title: "Projects"
     url: "/projects/" 
 
 header:
-  overlay_color: "#000000" # Pure Black
+  overlay_color: "#000000"
   overlay_image: /assets/images/abstract-tech-background.jpg
   caption: "Sharvita Paithankar | AI/ML, Full-Stack, Cloud Engineer"
   actions:
-    # FIXED: Updated the URL to the correct location for the resume
     - label: "View Resume (PDF)"
       url: "/assets/images/sharvita-resume.pdf"
     - label: "Get In Touch"
