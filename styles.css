@@ -3,9 +3,8 @@
   --bg: #0b0b0d;            /* deep charcoal for dark mode */
   --panel: #0f1113;
   --muted: #9aa3b2;
-  /* NEW ACCENT COLOR: C3E41D - a cyber-green/yellow for high contrast */
   --accent: #C3E41D;       /* cyber-green */
-  --accent-2: #9b6bff;     /* violet secondary (kept as fallback) */
+  --accent-2: #9b6bff;     /* violet secondary */
   --text: #e6eef6;
   --glass: rgba(255,255,255,0.03);
 
@@ -44,7 +43,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family:var(--body-font);
-  background:var(--bg); /* Removed the gradient on body for a clean dark look */
+  background:var(--bg); 
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -60,27 +59,27 @@ body{
 
 /* --- SITE HEADER (NAV) --- */
 .site-header{
-  position:fixed; /* Changed to fixed for the full-screen Hero */
+  position:fixed; 
   top:0;
   left:0;
   right:0;
   backdrop-filter: blur(6px);
   background: linear-gradient(180deg, rgba(0,0,0,0.45), transparent);
   z-index:50;
-  padding: 24px 32px; /* Increased padding */
+  padding: 24px 32px;
 }
 .site-header .container {
-  padding: 0; /* remove container padding inside header */
+  padding: 0;
 }
 .site-title{
-  font-family:var(--hero-font); /* Using Fira Code for signature */
+  font-family:var(--hero-font); 
   margin:0;
   font-weight:700;
   letter-spacing:1px;
   font-size:24px;
   display:inline-block;
-  color:var(--accent); /* Highlight title */
-  text-decoration: none; /* Ensure the title link is not underlined */
+  color:var(--accent); 
+  text-decoration: none;
 }
 .site-nav{
   float:right;
@@ -106,7 +105,7 @@ body{
   justify-content:center;
   align-items:center;
   position:relative;
-  margin-bottom: 60px; /* Space before projects */
+  margin-bottom: 60px;
   text-align:center;
 }
 
@@ -119,20 +118,17 @@ body{
   font-family:var(--hero-font);
   font-weight:700;
   color:var(--accent);
-  /* Massive text size, adjust for screen size */
   font-size:clamp(100px, 15vw, 210px); 
   line-height:0.8; 
   letter-spacing:-0.05em;
   text-transform:uppercase;
   margin:0;
-  /* Blur/Translate effect for initial load (requires JS, but this sets the initial state) */
   filter:blur(10px);
   opacity:0;
   transform:translateY(20px);
   animation: blur-in 1.5s cubic-bezier(.2,.9,.2,1) forwards;
 }
 
-/* Animation for the letters (can be used on index.html with inline styles) */
 @keyframes blur-in {
   to {
     filter: blur(0px);
@@ -146,12 +142,12 @@ body{
   top:50%;
   left:50%;
   transform:translate(-50%, -50%);
-  z-index:10; /* Above the text for the cutout effect */
+  z-index:10;
   width:clamp(60px, 10vw, 130px); 
   height:clamp(100px, 17vw, 220px);
   border-radius:120px;
   overflow:hidden;
-  box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--accent); /* Border effect */
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--accent);
   transition:transform .4s;
 }
 .hero-profile-image:hover {
@@ -170,7 +166,7 @@ body{
   font-size:clamp(16px, 3vw, 22px);
   color:var(--muted);
   margin-top:30px;
-  animation: blur-in 1.5s cubic-bezier(.2,.9,.2,1) 0.8s forwards; /* Delayed animation */
+  animation: blur-in 1.5s cubic-bezier(.2,.9,.2,1) 0.8s forwards;
   filter:blur(10px);
   opacity:0;
   transform:translateY(20px);
@@ -200,10 +196,10 @@ body{
   }
 }
 
-/* --- PROJECTS GRID --- */
+/* --- PROJECTS GRID - REVERTED TO STABLE GRID LAYOUT --- */
 
 .projects-grid-section{
-  padding: 60px 20px 48px; /* Added padding top to start content below the hero */
+  padding: 60px 20px 48px;
 }
 .projects-header{
   max-width:var(--max-width);
@@ -215,6 +211,7 @@ body{
   color:var(--accent);
 }
 
+/* Stable Grid Definition */
 .projects-grid{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
@@ -222,28 +219,24 @@ body{
   align-items:start;
 }
 
-/* Project card spans for symmetry */
+/* Project card spans for asymmetry */
 .project-card{
-  grid-column: span 4;
+  grid-column: span 4; /* Default size for all cards */
   background:linear-gradient(180deg,var(--panel),rgba(255,255,255,0.01));
   border-radius:var(--radius);
   box-shadow: 0 8px 30px rgba(2,6,23,0.55);
   overflow:hidden;
-  transform:translateZ(0); /* promote layer */
+  transform:translateZ(0);
   transition:transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
   position:relative;
   min-height:180px;
 }
 
-/* make some cards larger for asymmetry; adjusted for 4 cards */
-/* Card 1 & 2 will span 6 columns each (12 total for row 1) */
+/* Re-implementing the safe asymmetry CSS for the 4 pinned cards */
 .projects-grid .project-card:nth-child(1),
 .projects-grid .project-card:nth-child(2){ grid-column: span 6 !important; }
-
-/* Card 3 will span 4, Card 4 will span 8 for a split second row */
 .projects-grid .project-card:nth-child(3){ grid-column: span 4 !important; }
 .projects-grid .project-card:nth-child(4){ grid-column: span 8 !important; }
-
 
 .card-link{ color:inherit; text-decoration:none; display:block; height:100%;}
 .thumb-wrap{ position:relative; overflow:hidden; height:160px; }
@@ -260,7 +253,7 @@ body{
 .card-title{ font-family:var(--title-font); margin:0 0 6px; font-size:18px; letter-spacing:0.3px;}
 .card-desc{ margin:0; color:var(--muted); font-size:14px; }
 
-/* Hover / focus effects—floating module + subtle glow + glitch accent */
+/* Hover / focus effects */
 .project-card:hover, .project-card:focus-within{
   transform:translateY(-8px) scale(1.004);
   box-shadow: 0 22px 60px rgba(21,30,60,0.55);
@@ -273,7 +266,6 @@ body{
   position:absolute;
   inset:auto 0 0;
   height:3px;
-  /* Use the new accent color for the highlight */
   background:linear-gradient(90deg,var(--accent), var(--accent-2));
   opacity:.0;
   transition:opacity .28s;
@@ -325,69 +317,4 @@ body{
   .site-nav{ float:none; margin-top:8px; display:flex; gap:12px; }
   .site-title{ font-size:18px; }
   .hero-tagline{ font-size:16px; }
-}
-/* --- PROJECTS GRID - UPDATED FOR CAROUSEL EFFECT on index.html --- */
-
-/* Base projects-grid styles remain the same for ALL pages (like /projects/) */
-.projects-grid{
-  display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap:var(--gap);
-  align-items:start;
-}
-
-/* New: Styles for the HOME PAGE CAROUSEL */
-.carousel-wrapper {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.carousel-strip {
-  display: flex;
-  overflow-x: scroll; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Snap points for a smooth carousel feel */
-  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-  padding-bottom: 20px; /* Space for scrollbar */
-  gap: var(--gap);
-  margin-left: -20px; /* Pull into padding for edge-to-edge feel */
-  padding-left: 20px;
-}
-
-/* Adjusting the card size and behavior for the carousel */
-.carousel-strip .project-card {
-  /* Critical: Override the grid column spans */
-  grid-column: span 12 !important; 
-  flex: 0 0 450px; /* Fixed width for the card (adjust as needed) */
-  scroll-snap-align: start; /* Snap to the start of each card */
-  /* Re-enable your original asymmetry styles here to control card size in the carousel */
-}
-
-/* Ensure the cards are sized correctly in the carousel */
-.carousel-strip .project-card:nth-child(3n+1), 
-.carousel-strip .project-card:nth-child(4n+2){ 
-  flex: 0 0 550px; /* Make key cards wider in the carousel */
-}
-
-/* Hide scrollbar visually but keep functionality (for clean UI) */
-.carousel-strip::-webkit-scrollbar {
-  display: none;
-}
-.carousel-strip {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Responsiveness for carousel on small screens */
-@media (max-width: 900px) {
-  .carousel-strip .project-card {
-    flex: 0 0 80vw; /* Take up 80% of the viewport width */
-  }
-}
-
-/* Ensure standard project-grid on /projects/ page remains grid */
-@media (min-width: 1100px) {
-  .projects-grid-section:not(.carousel-wrapper) .projects-grid {
-    display: grid;
-  }
 }
