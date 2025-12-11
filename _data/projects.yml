@@ -1,0 +1,39 @@
+# ----------------------------------------
+# PROJECT DATA FILE
+# Edit this file to add, remove, or update any project.
+# ----------------------------------------
+- title: Financial Research Multi-Agent System
+  link: https://github.com/sharvita/financial-research-multi-agent-system
+  description: Engineered an autonomous system using LangGraph for LLM orchestration to perform web scraping and generate Pydantic-validated financial reports.
+  type: AI/ML
+  image: https://via.placeholder.com/1200x500/3c004c/C3E41D?text=MULTI-AGENT+SYSTEM
+  pinned: true
+
+- title: LLM Inference Service Deployment
+  link: https://github.com/sharvita/llm-production-deploy
+  description: Developed a Production LLM Inference Service (vLLM/FastAPI) achieving low-latency via GPU optimization and implementing robust AISecOps and Prometheus Monitoring.
+  type: DevOps/AI
+  image: https://via.placeholder.com/1200x500/0b0b0d/4ee3ff?text=LLM+PRODUCTION+SERVICE
+  pinned: true
+
+- title: Visual Grounding Model (RefCOCOg)
+  link: LINK_TO_VISUAL_GROUNDING_PROJECT 
+  description: Computer vision model using Python, PyTorch, and Faster R-CNN to localize objects in images from natural language queries (65.7% accuracy).
+  type: Computer Vision
+  image: https://via.placeholder.com/1200x500/0f1113/C3E41D?text=VISUAL+GROUNDING+MODEL
+  pinned: true
+
+- title: GCP Gen AI Data Extraction Pipeline
+  link: /about/index.html#generative-ai--machine-learning
+  description: Architected and deployed an AI-powered data extraction pipeline on GCP leveraging LLMs, automating web scraping and reducing manual data entry.
+  type: Professional/Cloud
+  image: https://via.placeholder.com/1200x500/0b0b0d/9b6bff?text=GCP+AI+DATA+PIPELINE
+  pinned: true
+
+# Example of an unpinned/secondary project (won't show on home page)
+- title: Optimized Angular Financial Dashboard
+  link: /about/index.html#squaretrade-software-engineer---full-stack
+  description: Developed 15+ Angular pages for financial dashboards, optimizing database queries and reducing load time from 12 seconds to 2 seconds.
+  type: Full-Stack
+  image: https://via.placeholder.com/1200x500/0f1113/9aa3b2?text=FULL-STACK+UI
+  pinned: false
