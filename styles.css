@@ -326,3 +326,68 @@ body{
   .site-title{ font-size:18px; }
   .hero-tagline{ font-size:16px; }
 }
+/* --- PROJECTS GRID - UPDATED FOR CAROUSEL EFFECT on index.html --- */
+
+/* Base projects-grid styles remain the same for ALL pages (like /projects/) */
+.projects-grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:var(--gap);
+  align-items:start;
+}
+
+/* New: Styles for the HOME PAGE CAROUSEL */
+.carousel-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel-strip {
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap points for a smooth carousel feel */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  padding-bottom: 20px; /* Space for scrollbar */
+  gap: var(--gap);
+  margin-left: -20px; /* Pull into padding for edge-to-edge feel */
+  padding-left: 20px;
+}
+
+/* Adjusting the card size and behavior for the carousel */
+.carousel-strip .project-card {
+  /* Critical: Override the grid column spans */
+  grid-column: span 12 !important; 
+  flex: 0 0 450px; /* Fixed width for the card (adjust as needed) */
+  scroll-snap-align: start; /* Snap to the start of each card */
+  /* Re-enable your original asymmetry styles here to control card size in the carousel */
+}
+
+/* Ensure the cards are sized correctly in the carousel */
+.carousel-strip .project-card:nth-child(3n+1), 
+.carousel-strip .project-card:nth-child(4n+2){ 
+  flex: 0 0 550px; /* Make key cards wider in the carousel */
+}
+
+/* Hide scrollbar visually but keep functionality (for clean UI) */
+.carousel-strip::-webkit-scrollbar {
+  display: none;
+}
+.carousel-strip {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Responsiveness for carousel on small screens */
+@media (max-width: 900px) {
+  .carousel-strip .project-card {
+    flex: 0 0 80vw; /* Take up 80% of the viewport width */
+  }
+}
+
+/* Ensure standard project-grid on /projects/ page remains grid */
+@media (min-width: 1100px) {
+  .projects-grid-section:not(.carousel-wrapper) .projects-grid {
+    display: grid;
+  }
+}
