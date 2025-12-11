@@ -19,7 +19,7 @@ permalink: /
         <a href="/" class="site-title">SHARVITA</a>
         <nav class="site-nav">
           <a href="/about/index.html">ABOUT</a>
-          <a href="/projects/index.html">PROJECTS</a> 
+          <a href="/projects/index.html">PROJECTS</a>
           <a href="/assets/images/sharvita-resume.pdf" target="_blank">RESUME</a>
           <a href="mailto:sharvitap123@gmail.com">CONTACT</a>
         </nav>
@@ -45,8 +45,8 @@ permalink: /
     <section id="projects-section" class="projects-grid-section">
       <h2 class="projects-header">Pinned Projects //</h2>
       
-      <div class="carousel-wrapper">
-        <div class="carousel-strip">
+      <div class="container">
+        <div class="projects-grid">
           
           {% assign pinned_projects = site.data.projects | where: "pinned", true | slice: 0, 4 %}
           
