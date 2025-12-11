@@ -14,7 +14,7 @@ Hello! I am a highly motivated Software Engineer and Cloud Technology Analyst sp
 ## 🚀 Professional Experience Highlights
 
 ### Hitachi, Software Engineer R&D
-* [cite_start]**Generative AI Pipeline:** Architected and deployed an AI-powered data extraction pipeline on **GCP** leveraging LLMs (OpenAI/Claude) and Prompt Engineering to automate web scraping from 15+ energy market websites, reducing manual data entry by **10 hours/week**[cite: 7].
+* **Generative AI Pipeline:** Architected and deployed an AI-powered data extraction pipeline on **GCP** leveraging LLMs (OpenAI/Claude) and Prompt Engineering to automate web scraping from 15+ energy market websites, reducing manual data entry by **10 hours/week**[cite: 7].
 * [cite_start]**Full-Stack Interfaces:** Built **React-based UIs** for trading workflows across 3 global energy markets, supporting **15+ live production interfaces**[cite: 7].
 * [cite_start]**Microservices:** Implemented **C#.NET microservices** and **RESTful APIs** for the energy trading platform, reducing cross-market data exchange latency by **5 seconds**[cite: 8].
 
@@ -24,7 +24,7 @@ Hello! I am a highly motivated Software Engineer and Cloud Technology Analyst sp
 * [cite_start]**Code Quality:** Enhanced code quality through **TDD** practices using **Jasmine** and **Karma**, integrating automated tests into a **Jenkins CI/CD pipeline** and achieving **83% test coverage**[cite: 14].
 
 ### Synoptek, Cloud Technology Analyst
-* [cite_start]**Cost Optimization:** Optimized cloud spending across **AWS** and **Azure**, delivering **25% cost reduction** and **\$30K in annualized client savings** by rightsizing resources[cite: 20].
+* [cite_start]**Cost Optimization:** Optimized cloud spending across **AWS** and **Azure**, delivering **25% cost reduction** and **$30K in annualized client savings** by rightsizing resources[cite: 20].
 * [cite_start]**IaC & Containerization:** Provisioned infrastructure using **Terraform IaC** and **Docker**, reducing deployment time from 3 hours to **45 minutes**[cite: 19].
 * [cite_start]**Security & Support:** Configured security controls (IAM policies, VPC settings), remediating **60+ security findings**, and maintaining a **94% customer satisfaction score**[cite: 21].
 
