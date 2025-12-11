@@ -80,6 +80,7 @@ body{
   font-size:24px;
   display:inline-block;
   color:var(--accent); /* Highlight title */
+  text-decoration: none; /* Ensure the title link is not underlined */
 }
 .site-nav{
   float:right;
@@ -201,8 +202,6 @@ body{
 
 /* --- PROJECTS GRID --- */
 
-/* Reusing your existing project grid styles below, no changes needed */
-
 .projects-grid-section{
   padding: 60px 20px 48px; /* Added padding top to start content below the hero */
 }
@@ -223,7 +222,7 @@ body{
   align-items:start;
 }
 
-/* Project card spans for asymmetry */
+/* Project card spans for symmetry */
 .project-card{
   grid-column: span 4;
   background:linear-gradient(180deg,var(--panel),rgba(255,255,255,0.01));
@@ -236,9 +235,15 @@ body{
   min-height:180px;
 }
 
-/* make some cards larger for asymmetry; adjust as needed */
-.project-card:nth-child(3n+1){ grid-column: span 6; }
-.project-card:nth-child(4n+2){ grid-column: span 8; }
+/* make some cards larger for asymmetry; adjusted for 4 cards */
+/* Card 1 & 2 will span 6 columns each (12 total for row 1) */
+.projects-grid .project-card:nth-child(1),
+.projects-grid .project-card:nth-child(2){ grid-column: span 6 !important; }
+
+/* Card 3 will span 4, Card 4 will span 8 for a split second row */
+.projects-grid .project-card:nth-child(3){ grid-column: span 4 !important; }
+.projects-grid .project-card:nth-child(4){ grid-column: span 8 !important; }
+
 
 .card-link{ color:inherit; text-decoration:none; display:block; height:100%;}
 .thumb-wrap{ position:relative; overflow:hidden; height:160px; }
