@@ -1,0 +1,102 @@
+---
+layout: null
+permalink: /about/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sharvita Paithankar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Antic&family=Montserrat:wght@600,700&family=Inter:wght@400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body { background-color: var(--bg); }
+        .about-content { max-width: 900px; margin: 0 auto; padding-top: 50px; }
+        .about-content h2, .about-content h3 { color: var(--accent); font-family: var(--title-font); border-bottom: 1px solid var(--glass); padding-bottom: 5px; margin-top: 30px; }
+        .about-content ul { list-style: disc; margin-left: 20px; }
+        .about-content strong { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" style="position: relative; background: var(--panel);">
+        <div class="container">
+            <a href="/" class="site-title">SHARVITA</a>
+            <nav class="site-nav">
+                <a href="/about/">ABOUT</a>
+                <a href="/#projects-section">PROJECTS</a>
+                <a href="/assets/images/sharvita-resume.pdf" target="_blank">RESUME</a>
+                <a href="mailto:sharvitap123@gmail.com">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container about-content">
+
+        <h1>👩‍💻 Sharvita Paithankar: AI/ML, Full-Stack, and Cloud Engineer</h1>
+
+        <p>Hello! I am a highly motivated graduate student at University of Colorado, Boulder and interested in the new technology that relates to AI/ML. I am also a Software Engineer and Cloud Technology Analyst specializing in scalable full-stack development, applied Generative AI, and resilient cloud infrastructure. My approach is centered on optimizing performance, automating complex workflows, and ensuring robust system reliability.</p>
+
+        <hr>
+
+        <h2>🚀 Professional Experience Highlights</h2>
+
+        <h3>Hitachi, Software Engineer R&D</h3>
+        <ul>
+            <li>**Generative AI Pipeline:** Architected and deployed an AI-powered data extraction pipeline on **GCP** leveraging LLMs (OpenAI/Claude) and Prompt Engineering to automate web scraping from 15+ energy market websites, reducing manual data entry by **10 hours/week**.</li>
+            <li>**Full-Stack Interfaces:** Built **React-based UIs** for trading workflows across 3 global energy markets, supporting **15+ live production interfaces**.</li>
+            <li>**Microservices:** Implemented **C#.NET microservices** and **RESTful APIs** for the energy trading platform, reducing cross-market data exchange latency by **5 seconds**.</li>
+        </ul>
+
+        <h3>Squaretrade, Software Engineer - Full Stack</h3>
+        <ul>
+            <li>**Performance Optimization:** Developed **15+ Angular pages** for financial dashboards, optimizing database queries and reducing load time from 12 seconds to **2 seconds**.</li>
+            <li>**Java Microservices:** Engineered a micro-service using **Java Spring Boot** and **PostgreSQL** that reduced monthly report generation from 3 days to **8 hours**.</li>
+            <li>**Code Quality:** Enhanced code quality through **TDD** practices using **Jasmine** and **Karma**, integrating automated tests into a **Jenkins CI/CD pipeline** and achieving **83% test coverage**.</li>
+        </ul>
+
+        <h3>Synoptek, Cloud Technology Analyst</h3>
+        <ul>
+            <li>**Cost Optimization:** Optimized cloud spending across **AWS** and **Azure**, delivering **25% cost reduction** and **$30K in annualized client savings** by rightsizing resources.</li>
+            <li>**IaC & Containerization:** Provisioned infrastructure using **Terraform IaC** and **Docker**, reducing deployment time from 3 hours to **45 minutes**.</li>
+            <li>**Security & Support:** Configured security controls (IAM policies, VPC settings), remediating **60+ security findings**, and maintaining a **94% customer satisfaction score**.</li>
+        </ul>
+
+        <hr>
+
+        <h2>🛠️ Featured Projects</h2>
+
+        <ul>
+            <li>**Financial Research Multi-Agent System:** Engineered an autonomous multi-agent system using LangGraph for LLM orchestration and Generative AI, integrating specialized agents to perform web scraping and financial calculations, and generating Pydantic-validated structured JSON reports.</li>
+            <li>**LLM Production Deploy:** Developed a Production LLM Inference Service using vLLM/FastAPI, achieving low-latency via GPU optimization, and implementing robust AISecOps (Toxicity Filter).</li>
+            <li>**Visual Grounding:** Developed computer vision model using **Python, PyTorch, and Faster R-CNN** to localize objects in images from natural language queries (e.g., "the red car on the left"), achieving **65.7% accuracy** on RefCOCOg benchmark.</li>
+        </ul>
+        
+        <hr>
+        
+        <h2>🎓 Education & Technical Skills</h2>
+        
+        <h3>Education</h3>
+        <ul>
+            <li>**Master's of Science, Computer Science** – University of Colorado - Boulder (Expected May 2026)</li>
+            <li>**Bachelor's of Science, Computer Science** – University of Colorado - Denver</li>
+        </ul>
+
+        <h3>Technical Skills Snapshot</h3>
+        <ul>
+            <li>**Programming:** Java, Python, C#, C/C++, JavaScript, SQL, HTML/CSS, Angular, React.js</li>
+            <li>**Cloud & DevOps:** AWS, Azure, GCP, Kubernetes, Docker, **Terraform**, Jenkins, Git, JIRA</li>
+            <li>**AI/ML:** Generative AI, Prompt Engineering, PyTorch, Tensorflow, RAG, Vertex AI</li>
+            <li>**Frameworks & Tools:** Spring Boot, Apache Kafka, Snowflake, Node.js</li>
+        </ul>
+
+    </div>
+
+    <div style="height: 100px; text-align: center; padding-top: 50px; color: var(--muted); font-size: 14px;">
+      &copy; {{ site.time | date: '%Y' }} Sharvita Paithankar. All rights reserved.
+    </div>
+    
+</body>
+</html>
