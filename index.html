@@ -17,11 +17,12 @@ permalink: /
     <header class="site-header">
       <div class="container">
         <a href="/" class="site-title">{{ site.author.name | split: ' ' | first }}</a>
+        
         <nav class="site-nav">
           <a href="/about/">ABOUT</a>
           <a href="#projects-section">PROJECTS</a>
-          <a href="{{ site.header.actions | where: 'label', 'View Resume (PDF)' | first | relative_url }}" target="_blank">RESUME</a>
-          <a href="mailto:{{ site.header.actions | where: 'label', 'Get In Touch' | first | url | replace: 'mailto:', '' }}">CONTACT</a>
+          <a href="/assets/images/sharvita-resume.pdf" target="_blank">RESUME</a>
+          <a href="mailto:sharvitap123@gmail.com">CONTACT</a>
         </nav>
       </div>
     </header>
@@ -50,19 +51,19 @@ permalink: /
     </div>
 
     <section id="projects-section" class="projects-grid-section">
-      <h2 class="projects-header">Featured Work & Projects //</h2>
+      <h2 class="projects-header">Pinned Projects //</h2>
       <div class="container">
         <div class="projects-grid">
           
           <div class="project-card">
             <a href="https://github.com/sharvita/financial-research-multi-agent-system" target="_blank" class="card-link">
               <div class="thumb-wrap">
-                <img src="https://i.postimg.cc/9Q29rG4Y/agent-system.jpg" alt="Financial Research Agent System" class="thumb">
+                <img src="https://picsum.photos/seed/agent/1200/500" alt="Autonomous Multi-Agent System" class="thumb">
                 <div class="thumb-overlay"></div>
               </div>
               <div class="card-body">
-                <h3 class="card-title" data-text="Financial Agent System">Financial Agent System</h3>
-                <p class="card-desc">Autonomous multi-agent system (LangGraph) for financial research, web scraping, and generating Pydantic-validated JSON reports.</p>
+                <h3 class="card-title" data-text="Multi-Agent System">Financial Research Multi-Agent System</h3>
+                <p class="card-desc">Engineered an autonomous system using LangGraph for LLM orchestration to perform web scraping and generate Pydantic-validated financial reports.</p>
               </div>
             </a>
           </div>
@@ -70,64 +71,38 @@ permalink: /
           <div class="project-card">
             <a href="https://github.com/sharvita/llm-production-deploy" target="_blank" class="card-link">
               <div class="thumb-wrap">
-                <img src="https://i.postimg.cc/G2F54N5T/llm-deploy.jpg" alt="Production LLM Inference Service" class="thumb">
+                <img src="https://picsum.photos/seed/vllm/1200/500" alt="Production LLM Inference Service" class="thumb">
                 <div class="thumb-overlay"></div>
               </div>
               <div class="card-body">
-                <h3 class="card-title" data-text="LLM Inference Service">LLM Inference Service</h3>
-                <p class="card-desc">vLLM/FastAPI production service with GPU optimization, AISecOps (Toxicity Filter), Prometheus monitoring, and automated CI/CD.</p>
+                <h3 class="card-title" data-text="Production LLM">LLM Inference Service Deployment</h3>
+                <p class="card-desc">Developed a Production LLM Inference Service (vLLM/FastAPI) achieving low-latency via GPU optimization and implementing robust AISecOps and Prometheus Monitoring.</p>
               </div>
             </a>
           </div>
           
           <div class="project-card">
-            <a href="#" target="_blank" class="card-link">
+            <a href="LINK_TO_VISUAL_GROUNDING_PROJECT" target="_blank" class="card-link">
               <div class="thumb-wrap">
-                <img src="https://i.postimg.cc/y8Y95fL5/visual-grounding.jpg" alt="Visual Grounding on RefCOCOg" class="thumb">
+                <img src="https://picsum.photos/seed/vision/1200/500" alt="Visual Grounding Model" class="thumb">
                 <div class="thumb-overlay"></div>
               </div>
               <div class="card-body">
-                <h3 class="card-title" data-text="Visual Grounding Model">Visual Grounding Model</h3>
-                <p class="card-desc">Computer vision model using Python, PyTorch, and Faster R-CNN to localize objects from natural language queries (65.7% accuracy).</p>
+                <h3 class="card-title" data-text="Visual Grounding">Visual Grounding Model (RefCOCOg)</h3>
+                <p class="card-desc">Computer vision model using Python, PyTorch, and Faster R-CNN to localize objects in images from natural language queries (65.7% accuracy).</p>
               </div>
             </a>
           </div>
           
           <div class="project-card">
-            <a href="/about/#core-competencies" class="card-link">
+            <a href="/about/#generative-ai--machine-learning" class="card-link">
               <div class="thumb-wrap">
-                <img src="https://i.postimg.cc/Nj9vF6q9/gcp-llm-pipeline.jpg" alt="Gen AI Data Extraction Pipeline" class="thumb">
+                <img src="https://picsum.photos/seed/gcp-pipeline/1200/500" alt="Gen AI Data Extraction Pipeline" class="thumb">
                 <div class="thumb-overlay"></div>
               </div>
               <div class="card-body">
-                <h3 class="card-title" data-text="Gen AI Data Pipeline">Gen AI Data Pipeline</h3>
-                <p class="card-desc">Architected AI-powered data extraction on GCP leveraging LLMs (OpenAI/Claude), reducing manual data entry by 10 hours/week.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <a href="/about/#cloud-devops" class="card-link">
-              <div class="thumb-wrap">
-                <img src="https://i.postimg.cc/cL1gX4k2/terraform-devops.jpg" alt="Cloud Cost Optimization" class="thumb">
-                <div class="thumb-overlay"></div>
-              </div>
-              <div class="card-body">
-                <h3 class="card-title" data-text="Cloud IaC & Optimization">Cloud IaC & Optimization</h3>
-                <p class="card-desc">Provisioned infra with Terraform/Docker across AWS/Azure, optimized spending for 25% cost reduction, and maintained 99% uptime.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <a href="/about/#full-stack-development" class="card-link">
-              <div class="thumb-wrap">
-                <img src="https://i.postimg.cc/ydK2Y39t/angular-react.jpg" alt="Full-Stack UI/Microservices" class="thumb">
-                <div class="thumb-overlay"></div>
-              </div>
-              <div class="card-body">
-                <h3 class="card-title" data-text="Full-Stack Trading UIs">Full-Stack Trading UIs</h3>
-                <p class="card-desc">Built 15+ React/Angular UIs for trading workflows and implemented C#/.NET microservices for low-latency market data exchange.</p>
+                <h3 class="card-title" data-text="AI Data Pipeline">GCP Gen AI Data Extraction Pipeline</h3>
+                <p class="card-desc">Architected and deployed an AI-powered data extraction pipeline on GCP leveraging LLMs, automating web scraping and reducing manual data entry.</p>
               </div>
             </a>
           </div>
